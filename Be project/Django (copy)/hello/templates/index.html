@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Sets</title>
+  <style type="text/css">
+    body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+
+    .header{
+    	font-size:60px
+    	
+    
+   	}
+
+   	.but{
+   		 background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+   		
+
+   	}
+    .search{
+      text-align: center;
+      
+      display: inline-block;
+
+      font-size: 300px;
+      width: 50em;  height: 100em;
+        
+
+    }
+    .box{
+      text-align: center;
+      
+      display: inline-block;
+
+      font-size: 30px;
+      width: 50em;  height: 100em;
+        
+
+    }
+
+    .ds{
+    	content: "\a";
+    	white-space: pre;
+    	text-align: left;
+    	line-height: 60pt;
+
+    }
+    .query
+    {
+    	height:2em; 
+    	width:30em;
+    	border-radius: 40px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+   
+
+   <h1 align="center" class="header">GET YOUR DATASET JUST BY A CLICK NOW!</h1>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+  
+  
+
+
+
+  <form action = "/external" method = "POST" class="box">
+  	{% csrf_token%}
+	<label for="search">DATA TO BE SEARCHED: </label>
+	<br>
+	<br>
+	<input id="search" type="text" name="search" class="query" >
+	<br>
+	<br>
+	<input type="submit" value="SEARCH" class="but" >
+	<br>
+	<br>
+	<br>
+	 <p id="ds" class="ds">{{var}}</p>  
+  
+</form>
+
+	
+ 
+
+ 
+  
+
+</body>
+</html>
