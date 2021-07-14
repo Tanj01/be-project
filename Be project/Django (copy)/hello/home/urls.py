@@ -21,5 +21,6 @@ from django.conf.urls import url
 urlpatterns = [
 	path("", views.index, name='home'),
 	url(r'^external', views.external),
+    url(r'^plot', views.plot),
 	    
 ]
